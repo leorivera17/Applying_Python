@@ -43,7 +43,6 @@ def str_capitalize(string:str)-> str:
     return word
 
 
-# this code works perfectly however you won't like it since its 'insufficien' in your eyes
 # def str_cap(string:str) ->str:
 #    sentence = ''
 #    word = ''
@@ -79,7 +78,6 @@ def str_rotate(something: str)-> str:
     return word
 
 
-# This function also works for the str_rotate, its just that I know you don't like long code
 # def rotate(something):
 #    word = ''
 #    for character in something:
@@ -103,7 +101,7 @@ def str_rotate(something: str)-> str:
 #    return choice
 
 # purpose: we get a string and return the start idx and end idx
-def make_substring(string, start_idx, end_idx, step: (str & num)) -> str:
+def make_substring(string, start_idx, end_idx, step: (str & int)) -> str:
     substring = ''
     for idx in range(start_idx, end_idx, step):
         substring += string[idx]
@@ -111,7 +109,7 @@ def make_substring(string, start_idx, end_idx, step: (str & num)) -> str:
 
 
 # purpose: To see if the word is spelled backwards (true) if not (false)
-def is_palindrome(string: str) -> bol:
+def is_palindrome(string: str) -> bool:
     for num in range(len(string) // 2):
         if string[(len(string) - 1) - num] in string[num]:
             return True
@@ -119,7 +117,7 @@ def is_palindrome(string: str) -> bol:
 
 
 # purpose: is to see if there is more than one letter same so print how many are there
-def count_characters(string, letter:str)-> num:
+def count_characters(string, letter:str) -> int:
     count = 0
     for one in range(len(string)):
         if letter in string[one]:
